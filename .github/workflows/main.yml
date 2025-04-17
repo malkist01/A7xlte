@@ -1,0 +1,25 @@
+name: main
+on:
+   workflow_dispatch:
+
+jobs:
+  build:
+       runs-on: ubuntu-22.04
+
+       steps:
+       - name: Creating env!
+         uses: actions/checkout@v2
+
+       - name: Setting up env!
+         run: |
+          git clone https://github.com/akhilnarang/scripts x
+          cd x/setup && bash android_build_env.sh
+          
+       - name: Building Kernel...
+         run: |
+             chmod +x compile.sh && bash compile.sh
+             shell: bash
+             env:
+              TZ: Asia/Jakarta
+              CHATID: ${{ secrets.CHAT_ID }}
+              API_BOT: ${{ secrets.BOT_API }}
