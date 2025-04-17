@@ -60,7 +60,7 @@ DEVICE="OPPO"
 CODENAME="A37"
 KERNEL_NAME="TeletubiesKernel"
 
-DEFCONFIG="teletubies_defconfig"
+DEFCONFIG="lineageos_a7xelte_defconfig"
 
 AnyKernel="https://github.com/malkist01/anykernel3.git"
 AnyKernelbranch="master"
